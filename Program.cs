@@ -23,7 +23,9 @@ class Program
 
         // MethodOverridingRealTimeExample methodOverridingRealTimeExample = new MethodOverridingRealTimeExample();
 
-        PolymorphismMethodHiding polymorphismMethodHiding = new PolymorphismMethodHiding();
+        //PolymorphismMethodHiding polymorphismMethodHiding = new PolymorphismMethodHiding();
+
+        //PartialClassMethod partialClassMethod = new PartialClassMethod();
     }
 }
 

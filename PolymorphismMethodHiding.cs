@@ -14,7 +14,8 @@
         /// <summary>
         public PolymorphismMethodHiding() 
         {
-            Child obj = new Child();
+            // Method Hiding/Shadowing in C#:
+            Child1 obj = new Child1();
             obj.Show();
             obj.Display();
             
@@ -28,6 +29,7 @@
         }
 
     }
+    // Method Hiding/Shadowing in C#:
     public class Parent1
     {
         public virtual void Show()
@@ -58,19 +60,19 @@
     //-----------------------------------------------------------
     public class Parent2
     {
-        public virtual void Method1()
+        public virtual void MethodHiding1()
         {
             Console.WriteLine("Parent Class Method1 Method");
         }
-        public void Method2()
+        public void MethodHiding2()
         {
             Console.WriteLine("Parent Class Method2 Method");
         }
-        public virtual void Method3()
+        public virtual void MethodHiding3()
         {
             Console.WriteLine("Parent Class Method3 Method");
         }
-        public void Method4()
+        public void MethodHiding4()
         {
             Console.WriteLine("Parent Class Method4 Method");
         }
@@ -79,24 +81,24 @@
     {
         //Overriding Virtual Method
         //Method Overriding
-        public override void Method1()
+        public override void MethodHiding1()
         {
             Console.WriteLine("Child Class Method1 Method");
         }
         //Overriding Non-Virtual Method
         //Not Possible. Compile Time Error
-        public override void Method2()
+        public new void MethodHiding2()
         {
             Console.WriteLine("Child Class Method2 Method");
         }
 
         //Method Hiding/Shadowing Virtual Method
-        public new void Method3()
+        public new void MethodHiding3()
         {
             Console.WriteLine("Child Class Method3 Method");
         }
         //Method Hiding/Shadowing Non-Virtual Method
-        public new void Method4()
+        public new void MethodHiding4()
         {
             Console.WriteLine("Child Class Method4 Method");
         }
@@ -104,4 +106,8 @@
 
 
 }
+//Not:
+//can not override the non-virtual method inside the Child class, so we use 'new' keyword
+
+
 //https://dotnettutorials.net/lesson/function-hiding-csharp/
