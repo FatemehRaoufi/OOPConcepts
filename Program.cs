@@ -26,6 +26,9 @@ class Program
         //PolymorphismMethodHiding polymorphismMethodHiding = new PolymorphismMethodHiding();
 
         //PartialClassMethod partialClassMethod = new PartialClassMethod();
+
+        //SealedClass sealedClass = new SealedClass();
+        SealedMethod sealedMethod = new SealedMethod();
     }
 }
 
