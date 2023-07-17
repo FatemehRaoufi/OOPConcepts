@@ -28,7 +28,9 @@ class Program
         //PartialClassMethod partialClassMethod = new PartialClassMethod();
 
         //SealedClass sealedClass = new SealedClass();
-        SealedMethod sealedMethod = new SealedMethod();
+        //SealedMethod sealedMethod = new SealedMethod();
+
+        //ExtensionMethods extensionMethods = new ExtensionMethods();
     }
 }
 
