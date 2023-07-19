@@ -31,6 +31,9 @@ class Program
         //SealedMethod sealedMethod = new SealedMethod();
 
         //ExtensionMethods extensionMethods = new ExtensionMethods();
+
+        //StaticVsNonStaticConstructors staticVsNonStaticConstructors = new StaticVsNonStaticConstructors();
+        //Console.WriteLine(StaticVsNonStaticConstructors.x);
     }
 }
 
