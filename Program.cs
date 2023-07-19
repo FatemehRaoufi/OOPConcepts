@@ -34,6 +34,8 @@ class Program
 
         //StaticVsNonStaticConstructors staticVsNonStaticConstructors = new StaticVsNonStaticConstructors();
         //Console.WriteLine(StaticVsNonStaticConstructors.x);
+
+        //InterfaceDemo interfaceDemo = new InterfaceDemo();
     }
 }
 
