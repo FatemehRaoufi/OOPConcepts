@@ -19,11 +19,123 @@ For example, we can control the data by validating whether the data is good enou
 
 //------------------------------------------
 
-The polymorphism in C# can be implemented using the following three ways.
+Types of Polymorphism in C#:
+There are two types of polymorphism in C#. They are as follows:
+
+* Static Polymorphism / Compile-Time Polymorphism / Early Binding
+* Dynamic Polymorphism / Run-Time Polymorphism / Late Binding
+
+
+The polymorphism in C# can be implemented using the following three ways:
 
 Method Overloading
 Operator Overloading
 Method Overriding
 Method Hiding
-
+//https://dotnettutorials.net/lesson/polymorphism-csharp/
 //--------------------------------
+
+What is the difference between Method Overloading and Method Overriding in C#?
+Method Overloading in C#
+It is an approach to defining multiple methods with the same name but with a different signature means by changing the number, type, and order of parameters.
+Overloading a method can be performed within a class as well as between the Parent-Child classes also.
+To overload a parent class method under the child classes, the child class does not require to take any permission from the parent.
+This is all about defining multiple behaviors to a method.
+Used to implement static polymorphism.
+No separate keywords are used to implement function overloading.
+Method Overriding in C#
+It is an approach to defining multiple methods with the same name and with the same signature means the same number, type, and order of parameters.
+Overriding of methods is not possible within the same class it must be performed under the child classes only.
+To override a parent class method under the child classes, first, the child class requires to take permission from its parent.
+This is all about changing the behavior of a method.
+Used to implement dynamic polymorphism.
+Use the virtual keyword for the base class function and override keyword in the derived class function to implement function overriding.
+
+//-------------------------
+How we can Re-Implement a Parent Method in the Child Class in C#?
+We can re-implement the parent class methods under the child classes in two different approaches. They are as follows
+
+Method Overriding
+Method Hiding
+
+
+In Method Overriding, the child classes re-implement their parent class methods which are declared as virtual. 
+That means here, the child classes re-implement the parent class methods with the permission of the parent class 
+because here in the parent class the method is declared as virtual giving permission to the child classes 
+for overriding the methods using the override modifier.
+
+In Method Hiding/Shadowing, the child classes can re-implement any method of its parent class methods even if they are not declared as virtual. 
+That means here the child class re-implements the parent class methods without taking any permission from its parent.
+
+//https://dotnettutorials.net/lesson/function-hiding-csharp/
+//--------------------------------------
+Partial Class
+
+When do we need to use Partial Class in C#?
+
+There are several situations when splitting a class definition is desirable
+
+When working on large projects, 
+splitting a class over separate files allows multiple programmers to work on it simultaneously.
+When working with automatically generated source code, 
+the code can be added to the class without having to recreate the source file. 
+Visual Studio uses this approach when creating windows form, Web service wrapper code, and so on.
+
+Rules to follow while working with Partial Classes in C#:
+Rule1: 
+All the parts that contain the class definition must use the partial keyword. 
+All the parts must be available at compile time to form the final type. 
+Otherwise, we will get a compilation error stating Missing partial modifier. Another partial declaration of this type exists. 
+
+Rule2: 
+All the parts of the partial class must have the same access modifier. 
+If we try to use different access modifiers in different parts of the partial class, 
+then we will get a compilation error saying that Partial declarations have conflicting accessibility modifiers. 
+
+Rule3: 
+If any of the parts are declared as abstract, then the entire type is considered as abstract or if any of the parts are declared as sealed, 
+then the entire type is considered as sealed or if any of the parts inherit a class, then the entire type inherits that class. Here, you can see, 
+one of the parts we declared as abstract, 
+and hence the complete class becomes abstract and as we know we cannot create an instance of an abstract class.
+
+Rule4: 
+C#.NET does not support multiple class inheritance that we already discussed in our Multiple Inheritance article become of the ambiguity problem. 
+That means different parts of the partial class must not specify different base classes. If we specify different bases class, 
+then we will get a compilation error saying Partial declarations must not specify different base classes.
+
+Rule5: 
+But it is possible with Partial classes that the different parts of the partial class can specify different base interfaces 
+and the final type should and must implement all the interface methods.
+https://dotnettutorials.net/lesson/partial-classes-partial-methods-csharp/
+
+//---------------------------------------------------------------------------
+
+Points to Remember while working with Sealed Class in C#
+A sealed class is completely the opposite of an abstract class.
+The sealed class cannot contain any abstract methods.
+It should be the bottom-most class within the inheritance hierarchy.
+A sealed class can never be used as a base class.
+The sealed class is specially used to avoid further inheritance.
+The keyword sealed can be used with classes, instance methods, and properties.
+Note: Even if a sealed class cannot be inherited, we can still consume the class members from any other class by creating the object of the class.
+
+https://dotnettutorials.net/lesson/sealed-class-methods-csharp/
+
+//---------------------------------------------------------------
+
+Difference Between Static and Non-Static Class in C#:
+1.In C#, the static class is created by using the static keyword, the rest of the others are non-static classes.
+2.We cannot create an instance of a static class even if reference variables are not possible. 
+On the other hand, we can create both instance and reference variables using a non-static class.
+3.We can access the members of a static class directly by using the class name. 
+To access the non-static members, we need an instance or object of that class.
+4.In static class, we can only define static members. On the other hand, inside a non-static class, we can define both static and non-static members.
+5.A static class contains only a static constructor whereas a non-static class contains can both static and instance constructors.
+6.Static classes are sealed and hence cannot inherit from another class. On the other hand, the non-static class can be inherited by another class.
+
+//-------------------------------------
+Generalization and Specialization in C#:
+
+o, the Rectangle class is already existing and from the Rectangle class, we have defined a new class with some extra features 
+i.e. we have a specialized class that is Cuboid. This is a specialization in C#.
+https://dotnettutorials.net/lesson/generalization-and-specialization-in-csharp/
