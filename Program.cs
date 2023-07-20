@@ -36,6 +36,12 @@ class Program
         //Console.WriteLine(StaticVsNonStaticConstructors.x);
 
         //InterfaceDemo interfaceDemo = new InterfaceDemo();
+
+        //IsAHasA isAHasA = new IsAHasA();
+        //isAHasA.EmployeeAddressMethod();
+        //isAHasA.RecCubMethod();
+            
+
     }
 }
 
